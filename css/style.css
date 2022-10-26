@@ -1,0 +1,136 @@
+* {box-sizing: border-box;}
+a:link,  a:visited {color: #000; text-decoration: none;}
+a:focus, a:active{outline: none;}
+html,body{line-height: 1; font-size: 28px;}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/*----------------------------HEADER----------------------------*/
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 15px;
+}
+.header-nav {
+    display: flex;
+    font-size: 0.786rem;
+}
+button.language {
+    background-color: #FFF;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Tourney';
+    font-size: 0.785rem;
+    font-weight: 600;
+    padding: 0 4px;
+    margin-right: 51px;
+    cursor: pointer;
+}
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-list li {
+    list-style: none;
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+}
+.menu-list li:not(:last-child)::after {
+    content: '/';
+    display: inline-block;
+    margin: 0 12px;
+}
+.menu-list li a {
+    cursor: pointer;
+}
+/*-----------------------------MAIN-----------------------------*/
+.section {
+    margin-top: 70px;
+}
+.section:last-child {
+    margin-bottom: 90px;
+}
+.title {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 35px;
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.286rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+.title .sup {
+    text-transform: capitalize;
+    font-family: 'Farro', sans-serif;
+    font-size: 300;
+    font-size: 0.6rem;
+    padding-left: 12px;
+    line-height: 1;
+}
+.section p {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.section p:not(:last-child) {
+    margin-bottom: 40px;
+}
+span.underline {
+    text-decoration: underline;
+}
+span.italic {
+    font-style: italic;
+}
+span.grey {
+    background-color: #D9D9D9;
+}
+.section p span.black {
+    font-weight: 700;
+}
+@media only screen and (max-width: 700px) {
+    html,body{font-size: 16px;}
+    .header img {
+        max-width: 119px; 
+        max-height: 27px;
+    }
+    .section {
+        margin-top: 35px;
+    }
+    .section:last-child {
+        margin-bottom: 35px;
+    }
+    .title {
+        margin-bottom: 10px;
+    }
+    .section p:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    html,body{font-size: 14px;}
+    .header img {
+        max-width: 71.4px; 
+        max-height: 16.2px;
+    }
+    button.language {
+        margin-right: 15px;
+    }
+    .menu-list li:not(:last-child)::after {
+        margin: 0 6px;
+    }
+}
